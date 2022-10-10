@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function miFuncion( ){
+            const miCuadro = document.getElementById("textoparr");
+            document.getElementById("parr1").innerHTML += miCuadro.value + "<br>";
+
+            const nuevoItem = document.createElement ("li")
+            nuevoItem.innerHTML = miCuadro.value;
+            document.getElementById("lista").appendChild(nuevoItem);
+
+        }
+        function fBorrar() {
+            document.getElementById("textoparr").value = "";
+            document.getElementById("parr1").innerHTML = "";
+        }
+    </script>
+</head>
+<body>
+    <input type="text" name="textoparr" id="textoparr" style="display:block; margin-bottom: 10px;;">
+    <button onclick="miFuncion()" style="display:inline-block;">Hacer clic</button>
+    <button onclick="fBorrar()" style="display:inline-block;"">Borrar</button>
+
+    <h3>Párrafo con items</h3>
+    <p id="parr1"></p>
+    <h3>Lista con items</h3>
+    <ul id="lista">
+    </ul>
+</body>
+</html>
