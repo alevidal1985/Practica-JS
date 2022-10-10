@@ -5,9 +5,9 @@ function Prueba() {
 }
 
 function fNombreApellido() {
-    const parr1 = document.getElementById("parr1");
-    var nombre = document.getElementById("nombre");
-    var apellido = document.getElementById("apellido");
+    const parr1 = document.querySelector("#parr1")
+    const nombre = document.querySelector("#nombre")
+    const apellido = document.querySelector("#apellido")
 
 
     parr1.innerHTML = `Tu nombre completo es ${nombre.value} ${apellido.value}`; 
